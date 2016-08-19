@@ -1,2 +1,2 @@
-# basiccs
+# BasiCSS
 Basic Sass starter kit
