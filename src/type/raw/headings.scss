@@ -1,0 +1,33 @@
+h1, .alpha, %alpha{
+    @include font-size($heading-size-1);
+}
+
+h2, .beta, %beta{
+    @include font-size($heading-size-2);
+}
+
+h3, .gamma, %gamma {
+    @include font-size($heading-size-3);
+}
+
+h4, .delta, %delta {
+    @include font-size($heading-size-4);
+}
+
+h5, .epsilon, %epsilon {
+    @include font-size($heading-size-5);
+}
+
+h6, .zeta, %zeta {
+    @include font-size($heading-size-6);
+}
+
+h1, .alpha, %alpha,
+h2, .beta, %beta,
+h3, .gamma, %gamma,
+h4, .delta, %delta,
+h5, .epsilon, %epsilon,
+h6, .zeta, %zeta {
+    font-weight: $heading-font-weight;
+    color: $text-colour;
+}

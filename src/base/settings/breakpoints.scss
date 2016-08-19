@@ -1,0 +1,15 @@
+$breakpoints: (
+    "small": 480px,
+    "medium": 768px,
+    "large": 1280px,
+) !default;
+
+
+$desktopFirst: false !default;
+$mqProperty: "max-width:" !default;
+
+@if $desktopFirst == true {
+    $mqProperty: "max-width:";
+} @else {
+    $mqProperty: "min-width:";
+}

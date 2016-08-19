@@ -1,0 +1,30 @@
+$colours: (
+    'blue': (
+        'base': #062b4f
+    ),
+    'grey': (
+        'base': #222222,
+        'light': #fbfbfb,
+        'mid': #e4e2e4,
+        'dark': #222222
+    ),
+    'red': (
+        'base': #851109,
+        'light': #f05049,
+        'mid': #851109,
+        'dark': #9f0c03
+    ),
+    'black': (
+        'base': #000000
+    ),
+    'white': (
+        'base': #ffffff
+    )
+);
+
+$bg-colour: map-get(map-get($colours, 'white'), 'base');
+$text-colour: map-get(map-get($colours, 'grey'), 'base');
+$border-colour: map-get(map-get($colours, 'grey'), 'mid');
+
+$link-colour: map-get(map-get($colours, 'grey'), 'dark');
+$link-hover-colour: map-get(map-get($colours, 'grey'), 'base');

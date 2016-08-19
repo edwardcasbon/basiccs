@@ -1,0 +1,15 @@
+@mixin px-rem($property, $values...) {
+    $pxs: '';
+    $rems: '';
+
+    @for $i from 1 through length($values) {
+        $pxValue: nth($values, $i);
+        $remValue: px-rem($pxValue);
+
+        $pxs: (#{$pxs}) + $pxValue + px + ' ';
+        $rems: (#{$rems}) + $remValue + ' ';
+    }
+
+    #{$property}: $pxs;
+    #{$property}: $rems;
+}

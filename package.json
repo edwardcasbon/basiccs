@@ -1,0 +1,28 @@
+{
+  "name": "basicss",
+  "version": "1.0.0",
+  "description": "Basic Sass starter kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edwardcasbon/basicss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edwardcasbon/basicss/issues"
+  },
+  "homepage": "https://github.com/edwardcasbon/basicss",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "reset-css": "^2.0.20160720"
+  }
+}

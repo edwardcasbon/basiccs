@@ -1,0 +1,6 @@
+$spacing-unit: 40px !default;
+$spacing-unit--small: round($spacing-unit / 2) !default;
+$spacing-unit--large: round($spacing-unit * 2) !default;
+
+$margin-whitelist: (0, 0.25, 0.5, 0.75, 1, 1.5, 2) !default;
+$padding-whitelist: (0, 0.25, 0.5, 0.75, 1, 1.5, 2) !default;

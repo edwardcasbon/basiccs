@@ -1,0 +1,4 @@
+$grid-cols: (12) !default;
+$grid-target-gutter: 0px !default;
+$grid-container-width: 960px !default;
+$grid-gutter: ($grid-target-gutter / $grid-container-width) * 100% !default;

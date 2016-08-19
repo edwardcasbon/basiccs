@@ -1,0 +1,28 @@
+/*
+ * Loop through and produce selectors such as:
+ * .colour--red,
+ * .colour--red--1,
+ * .background-colour--red,
+ * .background-colour--red--1 {}
+ */
+@each $colour, $shades in $colours {
+    $base-colour: map-get($shades, 'base');
+
+    .colour--#{$colour} {
+        color: $base-colour;
+    }
+
+    .background-colour--#{$colour} {
+        background-color: $base-colour;
+    }
+
+    @each $shade, $code in $shades {
+        .colour--#{$colour}--#{$shade} {
+            color: $code;
+        }
+
+        .background-colour--#{$colour}--#{$shade} {
+            background-color: $code;
+        }
+    }
+}

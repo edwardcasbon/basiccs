@@ -1,0 +1,60 @@
+.grid {
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.grid__row {
+    @extend %clearfix !optional;
+
+    &.grid__row--no-gutter {
+        .grid__col {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.grid__col {
+    display: block;
+    float: left;
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+
+    &.grid__col--no-gutter {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.grid__col--no-left-gutter {
+        padding-left: 0;
+    }
+
+    &.grid__col--no-right-gutter {
+        padding-right: 0;
+    }
+}
+
+.grid__content {
+    @include padding(0.5);
+}
+
+@include buildGrid($grid-gutter);
+
+$breakpoints: false !default;
+@if $breakpoints {
+    @each $breakpoint in $breakpoints {
+        $name: nth($breakpoint, 1);
+        $width: nth($breakpoint, 2);
+        $declaration: "(#{$mqProperty} #{$width})";
+
+        @media only screen and #{$declaration} {
+            @include buildGrid($grid-gutter, "--#{$name}");
+        }
+    }
+}

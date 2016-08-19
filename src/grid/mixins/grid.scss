@@ -1,0 +1,17 @@
+@mixin buildGrid ($gutter: 0, $suffix: "") {
+    @include build($gutter, $suffix);
+    @include build($gutter, $suffix, "push", "margin-left");
+}
+
+@mixin build ($gutter: 0, $suffix: "", $action: "span", $property: "width") {
+    @each $grid-col in $grid-cols {
+        @for $i from 1 through $grid-col {
+
+            $total: (100 / ($grid-col / $i)) * 1%;
+
+            .grid__col--#{$action}-#{$i}-of-#{$grid-col}#{$suffix} {
+                #{$property}: $total;
+            }
+        }
+    }
+}

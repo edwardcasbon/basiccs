@@ -1,0 +1,5 @@
+@function px-rem($px) {
+    $px: strip-unit($px);
+    $rem: (($px/16px) * 1px) + rem;
+    @return $rem;
+}

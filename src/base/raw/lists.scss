@@ -1,0 +1,31 @@
+ul, ol, dd {
+    @include margin(0.5, "left");
+}
+
+li {
+    @include margin(0.5, "bottom");
+}
+
+dt {
+    font-weight: bold;
+}
+
+ul ul,
+ul ol,
+ul dl,
+ol ul,
+ol ol,
+ol dl,
+dl ul,
+dl ol,
+dl dl {
+    @include margin(0.5, "top");
+}
+
+li {
+    > ul,
+    > ol {
+        @include margin(0, "top");
+        @include margin(0, "bottom");
+    }
+}
